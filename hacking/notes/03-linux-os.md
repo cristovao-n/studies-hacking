@@ -7,7 +7,6 @@
 > It shows the network interfaces available
 > eth: it's the Ethernet cable connection
 > It outputs local ip addresses and mac address
->
 
 ### File System
 
@@ -25,12 +24,11 @@ https://www.linuxfoundation.org/blog/blog/classic-sysadmin-the-linux-filesystem-
 
 #### /bin
 
-It is the directory that contains *binaries*: some of the applications and prorams you can run.
+It is the directory that contains _binaries_: some of the applications and programs you can run.
 
 #### /boot
 
 Files required for starting your system. Do not touch!
-
 
 #### /dev
 
@@ -52,4 +50,3 @@ Contains libraries. Libraries are files containing code that your applications c
 #### /usr
 
 Contains a mish-mash of directories which in turn contain applications, libraries, documentation, wallpapers, icons and a long list of other stuff that need to be shared by applications and services.
-
