@@ -49,7 +49,7 @@ Nmap is a very important tool for scanning
 
 #### Finding open ports in a host:
 
-`nmap HOST`
+`nmap {HOST}`
 
 > There are more advanced, aggressive scans that returns more information.
 > Documentation for the most commom commands of nmap CLI
@@ -57,7 +57,7 @@ Nmap is a very important tool for scanning
 
 #### Commons scans
 
-`nmap -sS HOST`
+`nmap -sS {HOST}`
 `nmap -s`
 
 #### Discovering target OS
@@ -66,31 +66,43 @@ The target machine must have at least one port open and one port closed.
 
 OBS: The MAC Address of VMs starts with `08:00:27`
 
-`sudo nmap -O HOST`
+`sudo nmap -O {HOST}`
 
 #### Detecting versions of services
 
-`sudo nmap -sV HOST`
+`sudo nmap -sV {HOST}`
 
-`sudo nmap -sV --version-intensity 0-9 HOST`
+`sudo nmap -sV --version-intensity 0-9 {HOST}`
 
 #### Aggressive scam
 
 This is easily detected by the target if it has good security artifacts.
 
-`sudo nmap -A HOST`
+`sudo nmap -A {HOST}`
 
 #### Scan port range
 
 This is useful when you want to be stealthy and scan just a few ports
 
-`nmap -p PORT HOST`
-`nmap -p 80, 22, 100 HOST`
-`nmap -p 1-100 HOST`
+`nmap -p PORT {HOST}`
+`nmap -p 80, 22, 100 {HOST}`
+`nmap -p 1-100 {HOST}`
 
-Scans all 2^16 ports available: `nmap -p 1-65535 HOST`
-Scans the most used 100 ports: `nmap -F HOST`
+Scans all 2^16 ports available: `nmap -p 1-65535 {HOST}`
+Scans the most used 100 ports: `nmap -F {HOST}`
 
 #### Bypassing Firewalls
 
-...
+Packet fragmentation
+
+`sudo nmap -f {HOST}`
+
+#### Decoys
+
+Target is in the same network - send fake packages from random local IP address to hide the real one
+
+`sudo nmap -D 192.168.1.2, 192.168.1.5, 192.168.1.15, ME {HOST}`
+
+Target is outside your network - send fake packages from random IP address to hide the real one
+
+`sudo nmap -D RND:5 HOST`
