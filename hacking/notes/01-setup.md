@@ -23,7 +23,30 @@
 The process is quite simple:
 - Download the ISO image
 - Create the VM alocating the desired amount of hardware resources
+  - Version: Debian 64-bit
+  - Base Memory: 4Gb 
+  - Processors: 1 CPU
+  - Hard Disk: 40Gb
 - Follow the wizard
+
+### Installing OS
+- View -> Scale mode
+- Hostname: kali
+- Domain name: empty
+- User: MrHacker, mrhacker, 15122021
+- Clock: Eastern
+- Partition disks: Guided - use entire disk
+  - All files in one partition
+- Software selection: default
+- GRUB boot loader: Yes
+  - /dev/sda
+- Boot machine
+
+### Settings
+
+- Display -> Video Memory: 80Mb
+- Installing Guest Additions
+  - sudo sh VBoxLinuxAdditions.run
 
 ### Network settings
 
