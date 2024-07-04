@@ -36,7 +36,7 @@ Device files.
 
 #### /etc
 
-It stands for "Everything to configure".
+It stands for "Everything to configure".  
 System-wide configurations files.
 
 #### /hoome
@@ -50,3 +50,15 @@ Contains libraries. Libraries are files containing code that your applications c
 #### /usr
 
 Contains a mish-mash of directories which in turn contain applications, libraries, documentation, wallpapers, icons and a long list of other stuff that need to be shared by applications and services.
+
+#### /media
+
+Contains files of removable media: USB drivers, DVD's, SD cards, etc
+
+#### /var
+
+Contains generated log files, caches and outputs
+
+#### /root
+
+It's the home directory of the root user
